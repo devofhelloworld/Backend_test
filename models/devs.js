@@ -19,7 +19,7 @@ module.exports = class Developer{
   }
 
   static fetchall(callback){
-    const savepath = path.join(rootdir,'data','data.json');
+    const savepath = path.join(process.cwd(),'data','data.json');
     fs.readFile(savepath,(error,data)=>{
       if(!error){
         callback(JSON.parse(data)) ;
